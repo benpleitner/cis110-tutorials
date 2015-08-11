@@ -5,13 +5,13 @@ body {
 	background-color: #f2f2f3;
 }
 
-/*h1 {
+h1 {
 	text-align: center;
   font-size: 3em;
   font-weight: 300;
   line-height: 1.25;
   color: #01256e;
-}*/
+}
 
 #question {
 	font-size: 24px;
@@ -43,7 +43,7 @@ body {
   padding-top: 120px;
 }
 
-#nextStep1 {
+#nextStep1, #nextStep2 {
 	text-align: center;
   padding-top: 80px;
   padding-bottom: 40px;
@@ -97,4 +97,12 @@ body {
     background-color: rgba(0, 0, 0, 0);
     color: #062946;
     text-decoration: none;
+}
+
+#line3, #line5 {
+	margin-left: 20px;
+}
+
+#line4 {
+	margin-left: 40px
 }
