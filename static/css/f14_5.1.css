@@ -38,7 +38,12 @@ body {
 }
 
 /* Button */
-#stackButton {
+#walkthroughButton {
+	text-align: center;
+  padding-top: 120px;
+}
+
+#nextStep1 {
 	text-align: center;
   padding-top: 80px;
   padding-bottom: 40px;
