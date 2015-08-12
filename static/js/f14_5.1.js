@@ -108,7 +108,6 @@ function clickNextStep1() {
 		  .write("Line_4: return true;", 1)
 		  .write("Line_5: }", 1)
 		  .write("Line_6: }", 1)
-		  .write(function () { theater.play(false); });
 	}
 
 	function teacherTheater(theater) {
@@ -135,9 +134,90 @@ function clickNextStep1() {
 		  .write("Line_2: ", 1)
 		  .write("Line_1: Let's deal with the last sentence of the problem. It states 'if the array is null or empty, return true.' In code that means we need to check if the array is equal to null or the array's length is 0.", 56 * 0.055 * 1000)
 		  .write("Line_2: Remember to use == instead of = when doing a boolean comparison. Also, as a reminder || means 'or', && means 'and' when doing boolean comparisons. Lastly, .length gets the length of an array while .length() gets the length of a String object.", 1)
-		  .write(function () { theater.play(false); });
 	}
 }
 
 function clickNextStep2() {
+	$("#nextStep2").css("display", "none")
+
+	answerTheater(theater);
+	teacherTheater(theater1);
+
+	function answerTheater(theater) {
+		theater
+		 .describe("Line_7", { speed: 1, accuracy: 1 }, "#line7")
+		 .describe("Line_8", { speed: 1, accuracy: 1 }, "#line8")
+		 .describe("Line_9", { speed: 1, accuracy: 1 }, "#line9")
+		 .describe("Line_10", { speed: 1, accuracy: 1 }, "#line10")
+		 .describe("Line_11", { speed: 1, accuracy: 1 }, "#line11")
+		 .describe("Line_12", { speed: 1, accuracy: 1 }, "#line12")
+		 .describe("Line_13", { speed: 1, accuracy: 1 }, "#line13")
+		 .describe("Line_14", { speed: 1, accuracy: 1 }, "#line14")
+		 .describe("Line_15", { speed: 1, accuracy: 1 }, "#line15")
+		 .describe("Line_16", { speed: 1, accuracy: 1 }, "#line16")
+		 .describe("Line_17", { speed: 1, accuracy: 1 }, "#line17")
+		 .describe("Line_18", { speed: 1, accuracy: 1 }, "#line18")
+		 .describe("Line_19", { speed: 1, accuracy: 1 }, "#line19")
+		 .describe("Line_20", { speed: 1, accuracy: 1 }, "#line20")
+		 .describe("Line_21", { speed: 1, accuracy: 1 }, "#line21")
+
+		theater
+		  .on("say:start, erase:start", function (eventName) {
+		    var self = this,
+		        current = self.current.voice;
+
+		    self.utils.addClass(current, "saying");
+		  })
+		  .on("say:end, erase:end", function (eventName) {
+		    var self = this,
+		        current = self.current.voice;
+
+		    self.utils.removeClass(current, "saying");
+		  });
+
+		theater
+			// .write(199 * 0.055 * 1000)
+		  .write("Line_6: ", 1)
+		  .write("Line_19: if (arr[0] < 0) {", 1)
+		  .write("Line_7: for (int i = 1; i < arr.length; i++) {", 1)
+		  .write("Line_8: if (arr[i] >= 0) {", 1)
+		  .write("Line_9: return false;", 1)
+		  .write("Line_10: }", 1)
+		  .write("Line_20: }", 1)
+		  .write("Line_11: } else {", 1)
+		  .write("Line_12: for (int i = 1; i < arr.length; i++) {", 1)
+		  .write("Line_13: if (arr[i] <= 0) {", 1)
+		  .write("Line_14: return false;", 1)
+		  .write("Line_15: }", 1)
+		  .write("Line_16: }", 1)
+		  .write("Line_21: }", 1)
+		  .write("Line_17: return true;", 1)
+		  .write("Line_18: }", 1)
+		  .write(function () { theater.play(false); });
+	}
+
+	function teacherTheater(theater) {
+		theater
+		 .describe("Line_1", { speed: 1, accuracy: 1 }, "#line1T")
+		 .describe("Line_2", { speed: 1, accuracy: 1 }, "#line2T")
+
+		theater
+		  .on("say:start, erase:start", function (eventName) {
+		    var self = this,
+		        current = self.current.voice;
+
+		    self.utils.addClass(current, "saying");
+		  })
+		  .on("say:end, erase:end", function (eventName) {
+		    var self = this,
+		        current = self.current.voice;
+
+		    self.utils.removeClass(current, "saying");
+		  });
+
+		theater
+		  .write("Line_1: ", 1)
+		  .write("Line_2: ", 1)
+		  .write(function () { theater.play(false); });
+	}
 }

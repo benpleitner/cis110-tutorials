@@ -22,13 +22,13 @@ h1 {
 }
 
 #answer {
-	margin-top: 100px;
+	margin-top: 50px;
 	font-size: 24px;
   color: #01256e;
 }
 
 #teacher {
-	margin-top: 100px;
+	margin-top: 50px;
 	font-size: 24px;
   color: #95001a;
 }
@@ -99,10 +99,18 @@ h1 {
     text-decoration: none;
 }
 
-#line3, #line5 {
+#line3, #line5, #line19, #line11, #line21, #line17 {
 	margin-left: 20px;
 }
 
-#line4 {
-	margin-left: 40px
+#line4, #line7, #line20, #line12, #line16 {
+	margin-left: 40px;
+}
+
+#line8, #line10, #line13, #line15 {
+	margin-left: 60px;
+}
+
+#line9, #line14 {
+	margin-left: 80px;
 }
